@@ -3,4 +3,11 @@
     <string name="new_game">New game</string>
     <string name="reset_score">Reset score</string>
     <string name="exit">exit</string>
+    <string name="asking">Do you really want to clear high score?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="cleared_notify">Score successfully cleared</string>
+    <string name="current_score">Current Score</string>
+    <string name="high_score">High Score</string>
+    <string name="reset">Reset</string>
 </resources>
