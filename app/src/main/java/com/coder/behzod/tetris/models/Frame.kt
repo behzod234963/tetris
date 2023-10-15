@@ -1,6 +1,7 @@
 package com.coder.behzod.tetris.models
 
 import com.coder.behzod.tetris.helper.array2dOfByte
+import java.util.ArrayList
 
 class Frame(private val width:Int){
 
@@ -9,8 +10,8 @@ class Frame(private val width:Int){
     fun addRow(byteStr: String):Frame{
         val row = ByteArray(byteStr.length)
 
-        for (i in byteStr.indices){
-            row[i] = "${byteStr[i]}".toByte()
+        for (index in byteStr.indices){
+            row[index] = "${byteStr[index]}".toByte()
         }
         data.add(row)
         return this
