@@ -10,4 +10,5 @@
     <string name="current_score">Current Score</string>
     <string name="high_score">High Score</string>
     <string name="reset">Reset</string>
+    <string name="end_game">Game over!!!</string>
 </resources>
