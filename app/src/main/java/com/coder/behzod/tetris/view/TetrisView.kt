@@ -24,8 +24,8 @@ class TetrisView : View {
     private var model:AppModel?=null
     private var activity:GameActivity?=null
     private val viewHandler = ViewHandler(this)
-    private val cellSize:Dimension=Dimension(0, 0)
-    private val frameOffset:Dimension=Dimension(0, 0)
+    private var cellSize:Dimension=Dimension(0, 0)
+    private var frameOffset:Dimension=Dimension(0, 0)
     
     constructor(ctx:Context,attr:AttributeSet):super(ctx,attr)
     constructor(ctx:Context,attr:AttributeSet,defStyle:Int):super(ctx,attr,defStyle)
@@ -136,7 +136,14 @@ class TetrisView : View {
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
-        val cellWidth
+        val cellWidth=(width-2* FRAME_OFFSET_BASE)/FieldConstants.COLUMN_COUNT.value
+        val cellHeight=(width-2* FRAME_OFFSET_BASE)/FieldConstants.ROW_COUNT.value
+        val n=Math.min(cellWidth,cellHeight)
+        this.cellSize=Dimension(n,n)
+        val offsetX=(width-FieldConstants.COLUMN_COUNT.value*n)/2
+        val offsetY=(width-FieldConstants.ROW_COUNT.value*n)/2
+        this.frameOffset=Dimension(offsetX,offsetY)
     }
+
 
 }

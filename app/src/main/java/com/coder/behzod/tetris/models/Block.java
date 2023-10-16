@@ -7,7 +7,7 @@ import com.coder.behzod.tetris.constants.FieldConstants;
 
 import androidx.annotation.NonNull;
 
-import com.coder.behzod.tetris.constants.FieldConstants;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 
@@ -77,8 +77,8 @@ public class Block {
         return this.position;
     }
 
-    public final int getFrameCount() {
-        return Shape.values()[shapeIndex].getFrameCount();
+    public final @NotNull Shape getFrameCount() {
+        return Shape.values()[shapeIndex];
     }
 
     public int getFrameNumber() {

@@ -57,12 +57,12 @@
             android:layout_weight="2"
             android:gravity="center">
             <Button
-                android:id="@+id/btnReset"
+                android:id="@+id/btnRestart"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 app:backgroundTint="@null"
                 android:background="@drawable/bg_lang_button"
-                android:text="@string/reset"
+                android:text="@string/restart"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/amidongrotesk"/>
@@ -72,5 +72,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+        <com.coder.behzod.tetris.view.TetrisView
+            android:id="@+id/tetrisView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </LinearLayout>
